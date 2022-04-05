@@ -33,11 +33,11 @@ pipeline {
         sh 'sudo scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@3.110.102.219:/opt/tomcat/webapps'
       }
     }
-//     stage('building docker image from docker file by tagging') {
-//       steps {
-//         sh 'docker build -t phanirudra9/phani9-devops:$BUILD_NUMBER .'
-//       }   
-//     }
+     stage('building docker image from docker file by tagging') {
+       steps {
+         sh 'docker build -t phanirudra9/phani9-devops:$BUILD_NUMBER .'
+       }   
+     }
 //     stage('logging into docker hub') {
 //       steps {
 //         sh 'docker login --username="phanirudra9" --password="9eb876d4@A"'
