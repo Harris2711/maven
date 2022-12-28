@@ -21,7 +21,7 @@ sudo apt install openjdk-8-jdk
 # Exporting the path
 
 ```sh
-vi ~/.bashrc
+vi ~/.bash_profile
 ```
 
 
