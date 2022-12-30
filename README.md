@@ -77,6 +77,8 @@ Go to maven and uncheck install-automatically and update the maven home director
 
  ```sh
    sudo apt-get install docker.io -y
+   to avoid the permission denied for dokcker
+   give permission to chmod 777 /var/run/docker.sock
 ```
 
  # Installing ansible 
