@@ -11,12 +11,6 @@
      apt:
        name: docker.io
        state: present
-     
-   - name: Log into DockerHub
-     docker_login:
-      username: harris2711
-      password: Harry@2711
-      email: mohammedharris556@gmail.com
       
    - name: Pull image from docker hub
      command: docker pull harris2711/harrisjenkins:"{{buildNumber}}"
