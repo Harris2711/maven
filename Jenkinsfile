@@ -30,24 +30,24 @@ pipeline {
     
     stage('Deploy to tomcat') {
       steps {
-        sh 'scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@18.221.178.126:/opt/tomcat/webapps'
+        sh 'sudo scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@65.2.128.222:/opt/tomcat/webapps'
       }
     }
-//     stage('building docker image from docker file by tagging') {
-//       steps {
-//         sh 'docker build -t phanirudra9/phani9-devops:$BUILD_NUMBER .'
-//       }   
-//     }
-//     stage('logging into docker hub') {
-//       steps {
-//         sh 'docker login --username="phanirudra9" --password="9eb876d4@A"'
-//       }   
-//     }
-//     stage('pushing docker image to the docker hub with build number') {
-//       steps {
-//         sh 'docker push phanirudra9/phani9-devops:$BUILD_NUMBER'
-//       }   
-//     }
+    stage('building docker image from docker file by tagging') {
+      steps {
+        sh 'docker build -t harris2711/harrisjenkins:$BUILD_NUMBER .'
+      }   
+    }
+    stage('logging into docker hub') {
+      steps {
+        sh 'docker login --username="harris2711" --password="Harry@2711"'
+      }   
+    }
+    stage('pushing docker image to the docker hub with build number') {
+      steps {
+        sh 'docker push harris2711/harrisjenkins:$BUILD_NUMBER'
+      }   
+    }
 //     stage('deploying the docker image into EC2 instance and run the container') {
 //       steps {
 //         sh 'ansible-playbook deploy.yml --extra-vars="buildNumber=$BUILD_NUMBER"'
@@ -56,7 +56,7 @@ pipeline {
 }
 post {
      always {
-       emailext to: 'mohammedharris556@gmail.com',
+       emailext to: 'lprudra9@gmail.com',
        attachLog: true, body: "Dear team pipeline is ${currentBuild.result} please check ${BUILD_URL} or PFA build log", compressLog: false,
        subject: "Jenkins Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
     }
