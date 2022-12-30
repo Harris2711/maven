@@ -4,7 +4,9 @@
   become: true
   tasks:
    - name: install docker
-     command: apt-get install dokcer.io -y
+     apt:
+       name: docker.io
+       state: present
      
    - name: Log into DockerHub
      docker_login:
