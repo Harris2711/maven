@@ -5,7 +5,7 @@
   tasks:
    - name: install docker
      apt:
-       name: docker.io
+       name: docker
        state: present
      
    - name: Log into DockerHub
