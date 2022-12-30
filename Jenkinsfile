@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Deploy to tomcat') {
       steps {
-        sh 'sudo scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@18.217.149.36:/home/ubuntu/tomcat/webapps'
+        sh 'sudo scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@18.217.149.36:/opt/tomcat/webapps'
       }
 }
 // post {
