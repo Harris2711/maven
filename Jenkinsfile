@@ -27,12 +27,12 @@ pipeline {
         sh 'scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@18.221.178.126:/opt/tomcat/webapps'
       }
 }
-// post {
-//      always {
-//        emailext to: 'nammimahesh01@gmail.com',
-//        attachLog: true, body: "Dear team pipeline is ${currentBuild.result} please check ${BUILD_URL} or PFA build log", compressLog: false,
-//        subject: "Jenkins Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
-//     }
-// }
+ post {
+      always {
+        emailext to: 'mohammedharris556@gmail.com',
+        attachLog: true, body: "Dear team pipeline is ${currentBuild.result} please check ${BUILD_URL} or PFA build log", compressLog: false,
+        subject: "Jenkins Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
+     }
+ }
 }
 }
