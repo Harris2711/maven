@@ -85,8 +85,8 @@ Go to maven and uncheck install-automatically and update the maven home director
    sudo apt-get install ansible -y
 ```
 
-**#Email notification on jenkins
-**
+ # Configuring Email on jenkins
+
 ```sh
 1. create a identity on aws and verify it
 2. create a smts crendtials
