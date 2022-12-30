@@ -87,6 +87,7 @@ Go to maven and uncheck install-automatically and update the maven home director
 
 #Email notification on jenkins
 
+```sh
 1. create a identity on aws and verify it
 2. create a smts crendtials
   SES > smtp setting > create credentails
@@ -97,6 +98,7 @@ Go to maven and uncheck install-automatically and update the maven home director
  4. configure the email notification
   add smtp server name > give the authentication credentails as smtip username and password > set port as 587 and enable tls
   and test the connection.
+```
   
 
 
