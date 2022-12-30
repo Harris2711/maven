@@ -24,4 +24,4 @@
      ignore_errors: yes
 
    - name: Run a container from the pulled image
-     command: docker run -d --name harry-c1 -p 80:8080 harris2711/harrisjenkins:"{{buildNumber}}"
+     command: docker run -d --name harry-c1 -p 80:80 harris2711/harrisjenkins:"{{buildNumber}}"
