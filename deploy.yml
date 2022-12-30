@@ -3,6 +3,9 @@
     ansible_python_interpreter: auto_legacy_silent
   become: true
   tasks:
+   - name: install docker
+     command: apt-get install dokcer.io -y
+     
    - name: Log into DockerHub
      docker_login:
       username: harris2711
