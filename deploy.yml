@@ -1,4 +1,6 @@
 - hosts: all
+  vars:
+    ansible_python_interpreter: auto_legacy_silent
   become: true
   tasks:
    - name: Log into DockerHub
