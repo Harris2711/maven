@@ -85,19 +85,19 @@ Go to maven and uncheck install-automatically and update the maven home director
    sudo apt-get install ansible -y
 ```
 
-#Email notification on jenkins
-
+**#Email notification on jenkins
+**
 ```sh
 1. create a identity on aws and verify it
 2. create a smts crendtials
-  SES > smtp setting > create credentails
+   SES > smtp setting > create credentails
 3. On jenkins configure the email 
- Configure > Extended email notification > add smtp servername name and ports as 587
- Add credentials of smtp in jenkins and set as tls 
+   Configure > Extended email notification > add smtp servername name and ports as 587
+   Add credentials of smtp in jenkins and set as tls 
  
  4. configure the email notification
-  add smtp server name > give the authentication credentails as smtip username and password > set port as 587 and enable tls
-  and test the connection.
+    add smtp server name > give the authentication credentails as smtip username and password > set port as 587 and enable tls
+    and test the connection.
 ```
   
 
