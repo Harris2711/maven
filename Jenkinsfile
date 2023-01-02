@@ -30,7 +30,7 @@ pipeline {
     
     stage('Deploy to tomcat') {
       steps {
-        sh 'scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@18.221.178.126:/opt/tomcat/webapps'
+        sh 'scp -i $tomcat_pem -o "StrictHostKeyChecking=no" webapp/target/webapp.war ubuntu@3.144.85.248:/opt/tomcat/webapps'
       }
     }
     // stage('building docker image from docker file by tagging') {
