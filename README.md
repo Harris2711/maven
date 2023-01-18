@@ -90,7 +90,7 @@ Go to maven and uncheck install-automatically and update the maven home director
  # Configuring Email on jenkins
 
 ```sh
-1. create a identity on aws and verify it
+1. create a SES identity on aws and verify it
 2. create a smts crendtials
    SES > smtp setting > create credentails
 3. On jenkins configure the email 
